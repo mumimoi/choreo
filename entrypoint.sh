@@ -52,6 +52,7 @@ PidFile ${RUN_DIR}/sshd.pid
 
 PermitRootLogin no
 UsePAM no
+StrictModes no
 PasswordAuthentication no
 KbdInteractiveAuthentication no
 ChallengeResponseAuthentication no
@@ -66,8 +67,6 @@ EOF
 fi
 
 # Start SSHD (foreground)
-# Note: sshd non-root umumnya hanya bisa menerima login untuk user yang sama (app)
-# Start it in background so we can run other processes too.
 /usr/sbin/sshd -D -e -f "${SSHD_CONFIG}" &
 SSHD_PID=$!
 
