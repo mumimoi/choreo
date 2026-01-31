@@ -33,9 +33,4 @@ EXPOSE 2222 6080
 USER 10014
 
 ENTRYPOINT ["/usr/bin/tini","--"]
-CMD ["/usr/local/bin/entrypoint.sh"]EXPOSE 2222 6080
-
-USER 10014
-
-ENTRYPOINT ["/usr/bin/tini","--"]
-CMD ["/home/app/entrypoint.sh"]
+CMD ["/usr/local/bin/entrypoint.sh"]
